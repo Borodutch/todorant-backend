@@ -1,6 +1,6 @@
 [phases.setup]
-nixPkgs = ["python311"]
-aptPkgs = ["openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl", "python3-pip"]
+nixPkgs = ["...", "python311"]
+aptPkgs = ["...", "openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl", "python3-pip"]
 
 [phases.install]
 cmds = [
