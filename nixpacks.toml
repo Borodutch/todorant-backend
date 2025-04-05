@@ -3,7 +3,7 @@ nixPkgs = ["...", "python311"]
 aptPkgs = ["...", "openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl"]
 
 [phases.install]
-cmds = ["yarn install"]
+cmds = ["yarn install", "pip install mkdocs mkdocs-material"]
 
 [phases.build]
 cmds = ["yarn build-ts && yarn generate-docs"]
