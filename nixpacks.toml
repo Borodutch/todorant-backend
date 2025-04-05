@@ -1,9 +1,12 @@
 [phases.setup]
-nixPkgs = ["...", "python311"]
-aptPkgs = ["...", "openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl"]
+nixPkgs = ["python311"]
+aptPkgs = ["openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl", "python3-pip"]
 
 [phases.install]
-cmds = ["yarn install", "pip install mkdocs mkdocs-material"]
+cmds = [
+  "yarn install",
+  "python3 -m pip install mkdocs mkdocs-material"
+]
 
 [phases.build]
 cmds = ["yarn build-ts && yarn generate-docs"]
