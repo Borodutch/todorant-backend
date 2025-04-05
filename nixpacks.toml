@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["...", "python311", "nodejs-16_x", "yarn"]
+nixPkgs = ["...", "python311"]
 aptPkgs = ["...", "openssh-client", "build-essential", "libssl3", "libssl-dev", "openssl"]
 
 [phases.install]
