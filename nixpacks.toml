@@ -5,10 +5,10 @@ nixPkgs = ["nodejs-16_x", "yarn"]
 cmds = ["yarn install"]
 
 [phases.build]
-cmds = ["yarn build"]
+cmds = ["yarn build-ts && yarn generate-docs"]
 
 [start]
-cmd = "yarn start"
+cmd = "node dist/server.js"
 
 [variables]
 NODE_ENV = "production"
